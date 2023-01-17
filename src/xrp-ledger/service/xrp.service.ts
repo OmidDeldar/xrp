@@ -6,7 +6,7 @@ export class XrpService {
 
     
     async createWallet(){
-        const MY_SERVER = "ws://195.201.86.188:5005";
+        const MY_SERVER = "ws://localhost:5005";
         const client = new xrpl.Client(MY_SERVER);
         await client.connect();
         const fund_result = await client.fundWallet();
@@ -16,7 +16,7 @@ export class XrpService {
     }
 
     async generateKey(){
-        const MY_SERVER = "ws://195.201.86.188:5005";
+        const MY_SERVER = "ws://localhost:5005";
         const client = new xrpl.Client(MY_SERVER);
         await client.connect();
         const test_wallet = xrpl.Wallet.generate();

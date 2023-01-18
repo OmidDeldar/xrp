@@ -12,14 +12,13 @@ async function bootstrap() {
   const config = new DocumentBuilder()
   .setTitle('ripple documentation')
   .setVersion('1.0')
-  .addTag('ripple')
   .build();
 const document = SwaggerModule.createDocument(app, config);
 SwaggerModule.setup('api', app, document);
 
-await app.listen(3000).then(async () => {
+await app.listen(4000).then(async () => {
   nestLogger.log(`Running`, 'Swagger');
-  nestLogger.log(`http://127.0.0.1:${3000}/api`, 'Running Swagger');
+  nestLogger.log(`http://127.0.0.1:${4000}/api`, 'Running Swagger');
 });
 }
 bootstrap();

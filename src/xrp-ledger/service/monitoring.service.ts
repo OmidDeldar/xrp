@@ -5,15 +5,15 @@ import Big from 'big.js';
 
 @Injectable()
 export class MonitoringXrpService implements OnModuleInit {
-    public socketClient: Socket;
+    // public socketClient: Socket;
     public autoid_n = 0;
     public awiting = []
     private socket = new WebSocket('wss://s.altnet.rippletest.net:51233');
     constructor(){
-        this.socketClient = io('http://localhost:4000')
+        // this.socketClient = io('http://localhost:4000')
     }
     onModuleInit() {
-        this.connectToXrp();
+        // this.connectToXrp( );
         // this.do_subscribe();
         // this.pingpong();
         
